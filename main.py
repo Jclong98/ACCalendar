@@ -50,4 +50,4 @@ def index():
 
     return render_template('index.html', todays_fish=todays_fish, current_month=current_month)
 
-app.run()
+
