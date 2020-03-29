@@ -1,0 +1,84 @@
+* {
+    padding: none;
+    margin: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    background-color: rgb(255, 243, 220);
+}
+
+main {
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: white;
+}
+
+header {
+    margin: 0;
+}
+
+.container {
+    width: 800px;
+}
+
+main h1 {
+    text-align: center;
+}
+
+.month-widget {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 160px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.month-check {
+    display: none;
+}
+.month-widget .month {
+    font-size: 13px;
+    text-align: center;
+    background-color: rgba(100, 100, 30, 0.2);
+    margin: 2px;
+    padding: 3px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.month-widget .active {
+    background-color: rgb(106, 238, 106);
+}
+
+table {
+    width: 45%;
+}
+
+table, tr {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+td {
+    margin: 3px 0;
+    padding: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1, h2 {
+    border-bottom: 2px solid yellowgreen;
+}
