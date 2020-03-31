@@ -57,7 +57,7 @@ main h1 {
 }
 
 table {
-    width: 45%;
+    width: 100%;
 }
 
 table, tr {
@@ -76,9 +76,17 @@ td {
 
 .row {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 h1, h2 {
     border-bottom: 2px solid yellowgreen;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+
 }

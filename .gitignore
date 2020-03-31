@@ -3,3 +3,4 @@ bugs.csv
 csv_to_sql.py
 venv/
 .vscode/
+__pycache__/
