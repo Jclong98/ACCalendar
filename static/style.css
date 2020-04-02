@@ -40,6 +40,10 @@ header {
     cursor: pointer;
 }
 
+#all-label {
+    grid-column: 1 / -1;
+}
+
 .calendar-widget label span {
     border-radius: 3px;
     padding: 2px 4px;
@@ -62,29 +66,130 @@ h1 {
     padding: 0 1em;
 }
 
-img {
-    width: 50px;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-td {
-    padding: 5px;
-    text-align: center;
-}
-
 .seasonality {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     font-size: 10px;
-    max-width: 200px;
-    margin: auto;
 }
 
+.seasonality div {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 2px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.3);
+    font-style: italic;
+}
+
+.seasonality div.current {
+    border: 1px solid tomato;
+}
+
+.seasonality div span {
+    border-radius: 3px;
+    padding: 2px 4px;
+    display: flex;
+}
+
+.seasonality div span.active {
+    background-color: yellowgreen;
+    color: rgb(50, 90, 10);
+}
+
+.bell {
+    color: gold;
+    transform: rotate(-15deg);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.map-marker {
+    color: tomato;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.clock {
+    color: lightblue;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#fish, #bugs {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    margin: 10px;
+}
+
+.catch {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-areas:
+        "image name name"
+        "image location location"
+        "price time time"
+        "shadowsize seasonality seasonality"
+        "shadowimg seasonality seasonality"
+    ;
+    gap: 5px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.coming-in {
+    background-color: rgba(153, 205, 50, 0.4);
+}
+
+.going-out {
+    background-color: rgba(255, 99, 71, 0.4);
+}
+
+.catch .icon {
+    grid-area: image;
+    background-color: rgb(255, 242, 226);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 60px;
+}
+
+.catch .name {
+    grid-area: name;
+    font-weight: bold;
+}
+
+.catch .price {
+    grid-area: price;
+}
+
+.catch .location {
+    grid-area: location;
+}
+
+.catch .time {
+    grid-area: time;
+}
+
+.catch .seasonality {
+    grid-area: seasonality;
+}
+
+.catch .shadow-size {
+    grid-area: shadowsize;
+    display: flex;
+    align-items: center;
+}
+
+.catch .shadow-img {
+    grid-area: shadowimg;
+    width: 70px;
+}
+
+.catch .shadow-size span {
+    margin-right: 0.5em;
+}
+
+.catch .shadow-size img {
+    width: 60px;
+}

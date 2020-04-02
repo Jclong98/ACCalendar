@@ -9,6 +9,7 @@
         $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/ed7b1e6505.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     
@@ -67,7 +68,10 @@
             <input type="radio" name="month" id="december" value="december">
             <span>Dec.</span>
         </label>
-        
+        <label id="all-label">
+            <input type="radio" name="month" id="all" value="all">
+            <span>All</span>
+        </label>
     </div>
 
     <div id="output">

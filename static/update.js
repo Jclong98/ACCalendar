@@ -1,4 +1,4 @@
-var months = [
+const MONTHS = [
     'january', 
     'february', 
     'march', 
@@ -13,7 +13,7 @@ var months = [
     'december',
 ]
 
-var monthsAbbr = {
+const MONTHS_ABBR = {
     "january":"Jan.",
     "february":"Feb.",
     "march":"Mar.",
@@ -30,117 +30,134 @@ var monthsAbbr = {
 
 // select the current month
 var d = new Date();
-var monthnum = d.getMonth();
-console.log(`Current Month: ${months[monthnum]}`)
+const MONTH_NUM = d.getMonth();
+console.log(`Current Month: ${MONTHS[MONTH_NUM]}`)
 
-
-// create and a tr element filled with th elements from a given list
-function createHeader(list) {
-    var tr = document.createElement("tr");
-
-    for (var h of list) {
-        var th = document.createElement("th");
-        th.innerHTML = h;
-        tr.append(th)
-    }
-
-    return tr;
-}
 
 // create an image object and make the 
 // correct source based on the script root
 function createImg(id, ext) {
     var img = document.createElement("IMG");
     img.src = `${$SCRIPT_ROOT}/static/${id}.${ext}`;
+    img.alt = id;
     return img;
 }
+
 
 // create the hours widget
 function createHours() {
     return document.createElement('td');
 }
 
+
 // create seasonality widget.
 function createCalendar(months) {
-    var widget = document.createElement('td');
+    var widget = document.createElement('div');
     widget.classList.add("seasonality");
 
-    for (let [month, abbr] of Object.entries(monthsAbbr)) {
+    for (let [month, abbr] of Object.entries(MONTHS_ABBR)) {
         let outer = document.createElement("div");
-        outer.classList.add("outer");
 
-        let inner = document.createElement("span");
-        inner.style = "border-radius: 3px; padding: 2px 4px; display: flex;";
-        outer.appendChild(inner);
-
-        inner.innerHTML = abbr;
-
-        if (months[month]) {
-            inner.style.backgroundColor = "yellowgreen";
-            inner.style.color = "rgb(50, 90, 10)"
+        // highlighting the current month in the calendar
+        if (month == MONTHS[MONTH_NUM]) {
+            outer.classList.add("current");
         }
 
+        let inner = document.createElement("span");        
+        inner.innerHTML = abbr;
+        
+        // checking if the month being iterated is on or off
+        if (months[month]) {
+            inner.classList.add("active");
+        }
+        
+        outer.appendChild(inner);
         widget.appendChild(outer);
     }
 
     return widget;
 }
 
-function createRow(index, row) {
-    // console.log(index, row);
-    var r = document.createElement("tr");
+function createCatch(index, row) {
+    let catchDiv = document.createElement("div");
+    catchDiv.classList.add("catch");
 
-    var td_index = document.createElement("td");
-    td_index.innerHTML = index;
-
-    var td_image = document.createElement("td");
-    td_image.append(createImg(row['image'], 'webp'));
-
-    var td_name = document.createElement("td");
-    td_name.innerHTML = row['name'];
-
-    var td_price = document.createElement("td");
-    td_price.innerHTML = row['price'];
-
-    var td_location = document.createElement("td");
-    td_location.innerHTML = row['location'];
-
-    var td_hours = document.createElement("td");
-    td_hours.innerHTML = row['time'];
-
-    r.append(
-        td_index, 
-        td_image,
-        td_name,
-        td_price,
-        td_location,
-        td_hours,
-        createCalendar(row),
-    )
-
-    if (row['shadow_size']) {
-        var fish_td = document.createElement("td");
-        var fish_div = document.createElement("div");
-        fish_div.style.display = "flex";
-        fish_div.style.alignItems = "center";
-        fish_div.style.justifyContent = "center";
-
-        var fish_span = document.createElement("span");
-        fish_span.style.marginRight = "5px";
-        fish_span.innerHTML = row['shadow_size'];
-
-        var max_width = 50;
-        var img_size = max_width/6 * row['shadow_size'] + max_width/2;
-
-        var fish_img = createImg('fish', 'svg');
-        fish_img.style.width = `${img_size}px`;
-    
-        fish_div.append(fish_span, fish_img)
-        fish_td.append(fish_div);
-        r.append(fish_td);
+    // determine if this catch is coming into season or going out of season
+    if (row[MONTHS[MONTH_NUM]]) {
+        if (!row[MONTHS[MONTH_NUM - 1]]) {
+            catchDiv.classList.add("coming-in");
+        }
+        if (!row[MONTHS[MONTH_NUM + 1]]) {
+            catchDiv.classList.add("going-out");
+        }
     }
 
-    return r;
+    // icon
+    let img = createImg(row['image'], 'webp');
+    img.classList.add("icon");
+
+    // fishnum + name of fish
+    let name = document.createElement("span");
+    name.classList.add("name");
+    name.innerHTML = `${index}. ${row['name']}`;
+
+    // location
+    let location = document.createElement("location");
+    location.classList.add("location");
+    location.innerHTML = `<i class="fas fa-map-marker-alt map-marker"></i> ${row['location']}`;
+
+    // time
+    let time = document.createElement("time");
+    time.classList.add("time");
+    time.innerHTML = `<i class="fas fa-clock clock"></i>  ${row['time']}`;
+
+    // price
+    let price = document.createElement("span");
+    price.classList.add("price");
+    price.innerHTML = `<i class="fas fa-bell bell"></i> ${row['price']}`;
+
+    // seasonality
+    let seasonality = createCalendar(row);
+
+    // setting color based on month
+
+    catchDiv.append(
+        img,
+        name,
+        price,
+        location,
+        time,
+        seasonality,
+    )
+
+    // shadow size
+    if (row['shadow_size'])
+    {
+        let shadowSize = document.createElement("span");
+        shadowSize.classList.add("shadow-size");
+        shadowSize.innerHTML = row['shadow_size'];
+
+        let shadowImg;
+
+        if (row['shadow_size'] == "Narrow") {
+            shadowImg = createImg('fish-narrow', 'svg');
+            shadowImg.style.width = `${8 * row['shadow_size'] + 10}px`;
+        }
+        else if (row['shadow_size'].includes("Fin")) {
+            shadowImg = createImg('fish-fin', 'svg');
+            shadowImg.style.width = `${8 * row['shadow_size'].split(' ')[0] + 10}px`;
+        }
+        else {
+            shadowImg = createImg('fish', 'svg');
+            shadowImg.style.width = `${8 * row['shadow_size'] + 10}px`;
+        }
+        
+        shadowImg.classList.add("shadow-img");
+
+        catchDiv.append(shadowSize, shadowImg);
+    }
+
+    return catchDiv;
 }
 
 // use jquery and ajax to query the server and get a response
@@ -164,16 +181,8 @@ function updateFilter() {
                 var output = document.getElementById(type);
                 output.innerHTML = '';
 
-                // creating a header
-                var headerlist = ['', '', 'Name', 'Price', 'Location', 'Active Hours', 'Seasonality']
-                if (type == 'fish')
-                    headerlist.push('Shadow Size')
-
-                output.appendChild(createHeader(headerlist));
-                
-
                 for (let [index, row] of Object.entries(data[type])) {
-                    output.appendChild(createRow(index, row));
+                    output.appendChild(createCatch(index, row));
                 }
             }
         }
@@ -183,4 +192,4 @@ function updateFilter() {
 // when the month radio buttons are changed, we want to run all the backend ajax stuff
 $("input[name='month']").change(updateFilter);
 
-$(`#${months[monthnum]}`).click()
+$(`#${MONTHS[MONTH_NUM]}`).click()

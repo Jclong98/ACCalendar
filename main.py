@@ -16,9 +16,15 @@ def get_months():
     fish_df = pd.read_csv("./static/fish.csv", index_col=0)
     bugs_df = pd.read_csv("./static/bugs.csv", index_col=0)
     
+    if m != "all":
+        fish_df = fish_df[fish_df[m]==True]
+        bugs_df = bugs_df[bugs_df[m]==True]
+
     return jsonify({
-        "fish":json.loads(fish_df[fish_df[m]==True].to_json(orient="index")),
-        "bugs":json.loads(bugs_df[bugs_df[m]==True].to_json(orient="index")),
+
+
+        "fish":json.loads(fish_df.to_json(orient="index")),
+        "bugs":json.loads(bugs_df.to_json(orient="index")),
     })
 
 
