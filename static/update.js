@@ -51,7 +51,7 @@ function createHeader(list) {
 // correct source based on the script root
 function createImg(id, ext) {
     var img = document.createElement("IMG");
-    img.src = `${$SCRIPT_ROOT}/static/Images/${id}.${ext}`;
+    img.src = `${$SCRIPT_ROOT}/static/${id}.${ext}`;
     return img;
 }
 
