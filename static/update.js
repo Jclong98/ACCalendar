@@ -1,14 +1,149 @@
 var months = [
-    'jan', 'feb', 'mar', 'apr', 
-    'may', 'jun', 'jul', 'aug', 
-    'sep', 'oct', 'nov', 'dec',
+    'january', 
+    'february', 
+    'march', 
+    'april', 
+    'may', 
+    'june', 
+    'july', 
+    'august', 
+    'september', 
+    'october', 
+    'november', 
+    'december',
 ]
+
+var monthsAbbr = {
+    "january":"Jan.",
+    "february":"Feb.",
+    "march":"Mar.",
+    "april":"Apr.",
+    "may":"May",
+    "june":"June",
+    "july":"July",
+    "august":"Aug.",
+    "september":"Sept.",
+    "october":"Oct.",
+    "november":"Nov.",
+    "december":"Dec.",
+}
 
 // select the current month
 var d = new Date();
 var monthnum = d.getMonth();
-console.log(`${months[monthnum]}-label`)
+console.log(`Current Month: ${months[monthnum]}`)
 
+
+// create and a tr element filled with th elements from a given list
+function createHeader(list) {
+    var tr = document.createElement("tr");
+
+    for (var h of list) {
+        var th = document.createElement("th");
+        th.innerHTML = h;
+        tr.append(th)
+    }
+
+    return tr;
+}
+
+// create an image object and make the 
+// correct source based on the script root
+function createImg(id, ext) {
+    var img = document.createElement("IMG");
+    img.src = `${$SCRIPT_ROOT}/static/Images/${id}.${ext}`;
+    return img;
+}
+
+// create the hours widget
+function createHours() {
+    return document.createElement('td');
+}
+
+// create seasonality widget.
+function createCalendar(months) {
+    var widget = document.createElement('td');
+    widget.classList.add("seasonality");
+
+    for (let [month, abbr] of Object.entries(monthsAbbr)) {
+        let outer = document.createElement("div");
+        outer.classList.add("outer");
+
+        let inner = document.createElement("span");
+        inner.style = "border-radius: 3px; padding: 2px 4px; display: flex;";
+        outer.appendChild(inner);
+
+        inner.innerHTML = abbr;
+
+        if (months[month]) {
+            inner.style.backgroundColor = "yellowgreen";
+            inner.style.color = "rgb(50, 90, 10)"
+        }
+
+        widget.appendChild(outer);
+    }
+
+    return widget;
+}
+
+function createRow(index, row) {
+    // console.log(index, row);
+    var r = document.createElement("tr");
+
+    var td_index = document.createElement("td");
+    td_index.innerHTML = index;
+
+    var td_image = document.createElement("td");
+    td_image.append(createImg(row['image'], 'webp'));
+
+    var td_name = document.createElement("td");
+    td_name.innerHTML = row['name'];
+
+    var td_price = document.createElement("td");
+    td_price.innerHTML = row['price'];
+
+    var td_location = document.createElement("td");
+    td_location.innerHTML = row['location'];
+
+    var td_hours = document.createElement("td");
+    td_hours.innerHTML = row['time'];
+
+    r.append(
+        td_index, 
+        td_image,
+        td_name,
+        td_price,
+        td_location,
+        td_hours,
+        createCalendar(row),
+    )
+
+    if (row['shadow_size']) {
+        var fish_td = document.createElement("td");
+        var fish_div = document.createElement("div");
+        fish_div.style.display = "flex";
+        fish_div.style.alignItems = "center";
+        fish_div.style.justifyContent = "center";
+
+        var fish_span = document.createElement("span");
+        fish_span.style.marginRight = "5px";
+        fish_span.innerHTML = row['shadow_size'];
+
+        var max_width = 50;
+        var img_size = max_width/6 * row['shadow_size'] + max_width/2;
+
+        var fish_img = createImg('fish', 'svg');
+        fish_img.style.width = `${img_size}px`;
+    
+        fish_div.append(fish_span, fish_img)
+        fish_td.append(fish_div);
+        r.append(fish_td);
+    }
+
+    return r;
+}
+
+// use jquery and ajax to query the server and get a response
 function updateFilter() {
 
     console.log("updating...");
@@ -17,104 +152,35 @@ function updateFilter() {
     $.getJSON(
         // location of url we want to contact
         $SCRIPT_ROOT + '/_get_months', 
-
+        
         // json to pass into that url
-        // getting the checked property for each checkbox
+        // getting the checked property for the month radio widget
         {
-            January:   $('#jan-check').prop('checked'),
-            February:  $('#feb-check').prop('checked'),
-            March:     $('#mar-check').prop('checked'),
-            April:     $('#apr-check').prop('checked'),
-            May:       $('#may-check').prop('checked'),
-            June:      $('#jun-check').prop('checked'),
-            July:      $('#jul-check').prop('checked'),
-            August:    $('#aug-check').prop('checked'),
-            September: $('#sep-check').prop('checked'),
-            October:   $('#oct-check').prop('checked'),
-            November:  $('#nov-check').prop('checked'),
-            December:  $('#dec-check').prop('checked'),
+            month:$("input[name='month']:checked").val()
         },
-
-        // what happens when the json is successfully passed
+        // on success, this function is called
         function(data) {
-            for (let [key, rows] of Object.entries(data)) {
-                
-                // $("#result").text(data);
-                var table = $(`#${key}-output-table`);
-                table.text(``);
-                
-                // creating the header again after it is deleted
-                var header = document.createElement("tr");
-                var th = document.createElement("th");
-                th.innerHTML = "Name";
-                header.append(th);
-                
-                th = document.createElement("th");
-                th.innerHTML = "Price";
-                header.append(th);
+            for (let type of ['fish', 'bugs']) {
+                var output = document.getElementById(type);
+                output.innerHTML = '';
 
-                th = document.createElement("th");
-                th.innerHTML = "Location";
-                header.append(th);
+                // creating a header
+                var headerlist = ['', '', 'Name', 'Price', 'Location', 'Active Hours', 'Seasonality']
+                if (type == 'fish')
+                    headerlist.push('Shadow Size')
+
+                output.appendChild(createHeader(headerlist));
                 
-                th = document.createElement("th");
-                th.innerHTML = "Hours";
-                header.append(th);
-                
-                table.append(header);
-                
-                for (let row of rows) {
-                    console.log(row);
-                    
-                    // creating a row to append to the table in html
-                    var htmlRow = document.createElement("tr");
-                    table.append(htmlRow);
-                    
-                    var nameCell = document.createElement("td");
-                    nameCell.innerHTML = row[0];
-                    htmlRow.append(nameCell);
-                    
-                    var priceCell = document.createElement("td");
-                    priceCell.innerHTML = row[1];
-                    htmlRow.append(priceCell);
-                    
-                    var locationCell = document.createElement("td");
-                    locationCell.innerHTML = row[2];
-                    htmlRow.append(locationCell);
-                    
-                    var hoursCell = document.createElement("td");
-                    hoursCell.innerHTML = row[3];
-                    htmlRow.append(hoursCell);
-                    
-                    //displaying active months calendar
+
+                for (let [index, row] of Object.entries(data[type])) {
+                    output.appendChild(createRow(index, row));
                 }
-            }    
+            }
         }
-    );
-
-    return false;
+    )
 }
 
-// when month-check is changed, we want to run all the backend ajax stuff
-$(".month-check").change(updateFilter);
+// when the month radio buttons are changed, we want to run all the backend ajax stuff
+$("input[name='month']").change(updateFilter);
 
-// a function to control the color of the checked boxes
-function toggleColor(element) {
-    element.addEventListener('click', () => {
-        if ($(`#${element.htmlFor}`).prop('checked'))
-            element.classList.remove("active")
-        else
-            element.classList.add("active")
-    })
-}
-
-// finding all month toggles and having the toggleColor function add 
-// event listeners to toggle their colors when clicked according to the 
-// checkboxes they are linked to
-var monthlabels = $(".month");
-for (var i = 0; i < monthlabels.length; i++) {
-    toggleColor(monthlabels[i]);
-}
-
-
-$(`#${months[monthnum]}-label`).click()
+$(`#${months[monthnum]}`).click()

@@ -3,68 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AC Fish/Bugs</title>
+    <title>Animal Crossing Fish/Bug Calendar</title>
 
     <script type=text/javascript>
         $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-
+    
 </head>
 <body>
+    <header id="header">
+        <h1>Shitty Animal Crossing Calendar</h1>
+    </header>
 
-    <main>
-        <header>
-            <h1>Shitty AC Calendar</h1>
-        </header>
+    <div class="calendar-widget">
+        <label>
+            <input type="radio" name="month" id="january" value="january">
+            <span>Jan.</span>
+        </label>
+        <label>
+            <input type="radio" name="month" id="february" value="february">
+            <span>Feb.</span>
+        </label>
+        <label>
+            <input type="radio" name="month" id="march" value="march">
+            <span>Mar.</span>
+        </label>
+        <label>
+            <input type="radio" name="month" id="april" value="april">
+            <span>Apr.</span>
+        </label>
+        <label>
+            <input type="radio" name="month" id="may" value="may">
+            <span>May</span>
+        </label>
+        <label>
+            <input type="radio" name="month" id="june" value="june">
+            <span>June</span>
+        </label>
+        <label>
+            <input type="radio" name="month" id="july" value="july">
+            <span>July</span>
+        </label>
+        <label>
+            <input type="radio" name="month" id="august" value="august">
+            <span>Aug.</span>
+        </label>
+        <label>
+            <input type="radio" name="month" id="september" value="september">
+            <span>Sept.</span>
+        </label>
+        <label>
+            <input type="radio" name="month" id="october" value="october">
+            <span>Oct.</span>
+        </label>
+        <label>
+            <input type="radio" name="month" id="november" value="november">
+            <span>Nov.</span>
+        </label>
+        <label>
+            <input type="radio" name="month" id="december" value="december">
+            <span>Dec.</span>
+        </label>
+        
+    </div>
 
-        <div class="month-widget container">
-            <input type="checkbox" id="jan-check" class="month-check">
-            <input type="checkbox" id="feb-check" class="month-check">
-            <input type="checkbox" id="mar-check" class="month-check">
-            <input type="checkbox" id="apr-check" class="month-check">
-            <input type="checkbox" id="may-check" class="month-check">
-            <input type="checkbox" id="jun-check" class="month-check">
-            <input type="checkbox" id="jul-check" class="month-check">
-            <input type="checkbox" id="aug-check" class="month-check">
-            <input type="checkbox" id="sep-check" class="month-check">
-            <input type="checkbox" id="oct-check" class="month-check">
-            <input type="checkbox" id="nov-check" class="month-check">
-            <input type="checkbox" id="dec-check" class="month-check">
+    <div id="output">
+        <h1>Fish</h1>
+        <table id="fish"></table>
+        
+        <h1>Bugs</h1>
+        <table id="bugs"></table>
+    </div>
 
-            <label class="month" id="jan-label" for="jan-check">Jan</label>
-            <label class="month" id="feb-label" for="feb-check">Feb</label>
-            <label class="month" id="mar-label" for="mar-check">Mar</label>
-            <label class="month" id="apr-label" for="apr-check">Apr</label>
-            <label class="month" id="may-label" for="may-check">May</label>
-            <label class="month" id="jun-label" for="jun-check">Jun</label>
-            <label class="month" id="jul-label" for="jul-check">Jul</label>
-            <label class="month" id="aug-label" for="aug-check">Aug</label>
-            <label class="month" id="sep-label" for="sep-check">Sep</label>
-            <label class="month" id="oct-label" for="oct-check">Oct</label>
-            <label class="month" id="nov-label" for="nov-check">Nov</label>
-            <label class="month" id="dec-label" for="dec-check">Dec</label>
-        </div>
-
-        <div class="row">
-            <div>
-                <h2>Fish</h2>
-                <table id="fish-output-table"></table>
-            </div>
-            <div>
-                <h2>Bugs</h2>
-                <table id="bugs-output-table"></table>
-            </div>
-        </div>
-    </main>
-
-    <script type=text/javascript>
-
-
-    </script>
     <script src="{{url_for('static', filename='update.js')}}"></script>
 
 </body>
