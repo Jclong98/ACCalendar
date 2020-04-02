@@ -1,0 +1,81 @@
+,name,image,price,location,shadow_size,time,january,february,march,april,may,june,july,august,september,october,november,december
+0,Bitterling,NH-Icon-bitterling,900,River,1,All day,True,True,True,False,False,False,False,False,False,False,True,True
+1,Pale chub,NH-Icon-palechub,200,River,1,9 AM - 4 PM,True,True,True,True,True,True,True,True,True,True,True,True
+2,Crucian carp,NH-Icon-cruciancarp,160,River,2,All day,True,True,True,True,True,True,True,True,True,True,True,True
+3,Dace,NH-Icon-dace,240,River,3,4 PM - 9 AM,True,True,True,True,True,True,True,True,True,True,True,True
+4,Carp,NH-Icon-carp,300,Pond,4,All day,True,True,True,True,True,True,True,True,True,True,True,True
+5,Koi,NH-Icon-koi,4000,Pond,4,4 PM - 9 AM,True,True,True,True,True,True,True,True,True,True,True,True
+6,Goldfish,NH-Icon-goldfish,1300,Pond,1,All day,True,True,True,True,True,True,True,True,True,True,True,True
+7,Pop-eyed goldfish,NH-Icon-popeyedgoldfish,1300,Pond,1,9 AM - 4 PM,True,True,True,True,True,True,True,True,True,True,True,True
+8,Ranchu goldfish,NH-Icon-ranchugoldfish,4500,Pond,2,9 AM - 4 PM,True,True,True,True,True,True,True,True,True,True,True,True
+9,Killifish,NH-Icon-killifish,300,Pond,1,All day,False,False,False,True,True,True,True,True,False,False,False,False
+10,Crawfish,NH-Icon-crawfish,200,Pond,2,All day,False,False,False,True,True,True,True,True,True,False,False,False
+11,Soft-shelled turtle,NH-Icon-softshelledturtle,3750,River,4,4 PM - 9 AM,False,False,False,False,False,False,False,True,True,False,False,False
+12,Snapping Turtle,NH-Icon-snappingturtle,5000,River,5,9 PM - 4 AM,False,False,False,True,True,True,True,True,True,True,False,False
+13,Tadpole,NH-Icon-tadpole,100,Pond,1,All day,False,False,True,True,True,True,True,False,False,False,False,False
+14,Frog,NH-Icon-frog,120,Pond,2,All day,False,False,False,False,True,True,True,True,False,False,False,False
+15,Freshwater goby,NH-Icon-freshwatergoby,400,River,2,4 PM - 9 AM,True,True,True,True,True,True,True,True,True,True,True,True
+16,Loach,NH-Icon-loach,400,River,2,All day,False,False,True,True,True,False,False,False,False,False,False,False
+17,Catfish,NH-Icon-catfish,800,Pond,4,4 PM - 9 AM,False,False,False,False,True,True,True,True,True,True,False,False
+18,Giant snakehead,NH-Icon-giantsnakehead,5500,Pond,5,9 AM - 4 PM,False,False,False,False,False,True,True,True,False,False,False,False
+19,Bluegill,NH-Icon-bluegill,180,River,2,9 AM - 4 PM,True,True,True,True,True,True,True,True,True,True,True,True
+20,Yellow perch,NH-Icon-yellowperch,300,River,3,All day,True,True,True,False,False,False,False,False,False,True,True,True
+21,Black bass,NH-Icon-blackbass,400,River,4,All day,True,True,True,True,True,True,True,True,True,True,True,True
+22,Tilapia,NH-Icon-tilapia,800,River,3,All day,False,False,False,False,False,True,True,True,True,True,False,False
+23,Pike,NH-Icon-pike,1800,River,5,All day,False,False,False,False,False,False,False,False,True,True,True,True
+24,Pond smelt,NH-Icon-pondsmelt,500,River,2,All day,True,True,False,False,False,False,False,False,False,False,False,True
+25,Sweetfish,NH-Icon-sweetfish,900,River,3,All day,False,False,False,False,False,False,True,True,True,False,False,False
+26,Cherry salmon,NH-Icon-cherrysalmon,1000,River (Clifftop) Pond,3,4 PM - 9 AM,False,False,True,True,True,True,False,False,True,True,True,False
+27,Char,NH-Icon-char,3800,River (Clifftop) Pond,3,4 PM - 9 AM,False,False,True,True,True,True,False,False,True,True,True,False
+28,Golden trout,NH-Icon-goldentrout,15000,River (Clifftop),3,4 PM - 9 AM,False,False,True,True,True,False,False,False,True,True,True,False
+29,Stringfish,NH-Icon-stringfish,15000,River (Clifftop),5,4 PM - 9 AM,True,True,True,False,False,False,False,False,False,False,False,True
+30,Salmon,NH-Icon-salmon,700,River (Mouth),4,All day,False,False,False,False,False,False,False,False,True,False,False,False
+31,King salmon,NH-Icon-kingsalmon,1800,River (Mouth),6,All day,False,False,False,False,False,False,False,False,True,False,False,False
+32,Mitten crab,NH-Icon-mittencrab,2000,River,2,4 PM - 9 AM,False,False,False,False,False,False,False,False,True,True,True,False
+33,Guppy,NH-Icon-guppy,1300,River,1,9 AM - 4 PM,False,False,False,True,True,True,True,True,True,True,True,False
+34,Nibble fish,NH-Icon-nibblefish,1500,River,1,9 AM - 4 PM,False,False,False,False,True,True,True,True,True,False,False,False
+35,Angelfish,NH-Icon-angelfish,3000,River,2,4 PM - 9 AM,False,False,False,False,True,True,True,True,True,True,False,False
+36,Betta,NH-Icon-betta,2500,River,2,9 AM - 4 PM,False,False,False,False,True,True,True,True,True,True,False,False
+37,Neon tetra,NH-Icon-neontetra,500,River,1,9 AM - 4 PM,False,False,False,True,True,True,True,True,True,True,True,False
+38,Rainbowfish,NH-Icon-rainbowfish,800,River,1,9 AM - 4 PM,False,False,False,False,True,True,True,True,True,True,False,False
+39,Piranha,NH-Icon-piranha,2500,River,2,9 AM - 4 PM & 9 PM - 4 AM,False,False,False,False,False,True,True,True,True,False,False,False
+40,Arowana,NH-Icon-arowana,10000,River,4,4 PM - 9 AM,False,False,False,False,False,True,True,True,True,False,False,False
+41,Dorado,NH-Icon-dorado,15000,River,5,4 AM - 9 PM,False,False,False,False,False,True,True,True,True,False,False,False
+42,Gar,NH-Icon-gar,6000,Pond,6,4 PM - 9 AM,False,False,False,False,False,True,True,True,True,False,False,False
+43,Arapaima,NH-Icon-arapaima,10000,River,6,4 PM - 9 AM,False,False,False,False,False,True,True,True,True,False,False,False
+44,Saddled bichir,NH-Icon-saddledbichir,4000,River,4,9 PM - 4 AM,False,False,False,False,False,True,True,True,True,False,False,False
+45,Sturgeon,NH-Icon-sturgeon,10000,River (Mouth),6,All day,True,True,True,False,False,False,False,False,True,True,True,True
+46,Sea butterfly,NH-Icon-seabutterfly,1000,Sea,1,All day,True,True,True,False,False,False,False,False,False,False,False,True
+47,Sea horse,NH-Icon-seahorse,1100,Sea,1,All day,False,False,False,True,True,True,True,True,True,True,True,False
+48,Clown fish,NH-Icon-clownfish,650,Sea,1,All day,False,False,False,True,True,True,True,True,True,False,False,False
+49,Surgeonfish,NH-Icon-surgeonfish,1000,Sea,2,All day,False,False,False,True,True,True,True,True,True,False,False,False
+50,Butterfly fish,NH-Icon-butterflyfish,1000,Sea,2,All day,False,False,False,True,True,True,True,True,True,False,False,False
+51,Napoleonfish,NH-Icon-napoleonfish,10000,Sea,6,4 AM - 9 PM,False,False,False,False,False,False,True,True,False,False,False,False
+52,Zebra turkeyfish,NH-Icon-zebraturkeyfish,500,Sea,3,All day,False,False,False,True,True,True,True,True,True,True,True,False
+53,Blowfish,NH-Icon-blowfish,5000,Sea,3,9 PM - 4 AM,True,True,False,False,False,False,False,False,False,False,True,True
+54,Puffer fish,NH-Icon-pufferfish,250,Sea,3,All day,False,False,False,False,False,False,True,True,True,False,False,False
+55,Anchovy,NH-Icon-anchovy,200,Sea,2,4 AM - 9 PM,True,True,True,True,True,True,True,True,True,True,True,True
+56,Horse mackerel,NH-Icon-horsemackerel,150,Sea,2,All day,True,True,True,True,True,True,True,True,True,True,True,True
+57,Barred knifejaw,NH-Icon-barredknifejaw,5000,Sea,3,All day,False,False,True,True,True,True,True,True,True,True,True,False
+58,Sea bass,NH-Icon-seabass,400,Sea,5,All day,True,True,True,True,True,True,True,True,True,True,True,True
+59,Red snapper,NH-Icon-redsnapper,3000,Sea,4,All day,True,True,True,True,True,True,True,True,True,True,True,True
+60,Dab,NH-Icon-dab,300,Sea,3,All day,True,True,True,True,False,False,False,False,False,True,True,True
+61,Olive flounder,NH-Icon-oliveflounder,800,Sea,5,All day,True,True,True,True,True,True,True,True,True,True,True,True
+62,Squid,NH-Icon-squid,500,Sea,3,All day,True,True,True,True,True,True,True,True,False,False,False,True
+63,Moray eel,NH-Icon-morayeel,2000,Sea,Narrow,All day,False,False,False,False,False,False,False,True,True,True,False,False
+64,Ribbon eel,NH-Icon-ribboneel,600,Sea,Narrow,All day,False,False,False,False,False,True,True,True,True,True,False,False
+65,Tuna,NH-Icon-tuna,7000,Pier,6,All day,True,True,True,True,False,False,False,False,False,False,True,True
+66,Blue marlin,NH-Icon-bluemarlin,10000,Pier,6,All day,True,True,True,True,False,False,True,True,True,False,True,True
+67,Giant trevally,NH-Icon-gianttrevally,4500,Pier,5,All day,False,False,False,False,True,True,True,True,True,True,False,False
+68,Mahi-mahi,NH-Icon-mahimahi,6000,Pier,5,All day,False,False,False,False,True,True,True,True,True,True,False,False
+69,Ocean sunfish,NH-Icon-oceansunfish,4000,Sea,6 (Fin),4 AM - 9 PM,False,False,False,False,False,False,True,True,True,False,False,False
+70,Ray,NH-Icon-ray,3000,Sea,5,4 AM - 9 PM,False,False,False,False,False,False,False,True,True,True,True,False
+71,Saw shark,NH-Icon-sawshark,12000,Sea,6 (Fin),4 PM - 9 AM,False,False,False,False,False,True,True,True,True,False,False,False
+72,Hammerhead shark,NH-Icon-hammerheadshark,8000,Sea,6 (Fin),4 PM - 9 AM,False,False,False,False,False,True,True,True,True,False,False,False
+73,Great white shark,NH-Icon-greatwhiteshark,15000,Sea,6 (Fin),4 PM - 9 AM,False,False,False,False,False,True,True,True,True,False,False,False
+74,Whale shark,NH-Icon-whaleshark,13000,Sea,6 (Fin),All day,False,False,False,False,False,True,True,True,True,False,False,False
+75,Suckerfish,NH-Icon-suckerfish,1500,Sea,4 (Fin),All day,False,False,False,False,False,True,True,True,True,False,False,False
+76,Football fish,NH-Icon-footballfish,2500,Sea,4,4 PM - 9 AM,True,True,True,False,False,False,False,False,False,False,True,True
+77,Oarfish,NH-Icon-oarfish,9000,Sea,6,All day,True,True,True,True,True,False,False,False,False,False,False,True
+78,Barreleye,NH-Icon-barreleye,15000,Sea,2,9 PM - 4 AM,True,True,True,True,True,True,True,True,True,True,True,True
+79,Coelacanth,NH-Icon-coelacanth,15000,Sea (Raining),6,All day,True,True,True,True,True,True,True,True,True,True,True,True

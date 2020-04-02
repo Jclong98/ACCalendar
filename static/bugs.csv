@@ -1,0 +1,81 @@
+,name,image,price,location,time,january,february,march,april,may,june,july,august,september,october,november,december
+0,Common butterfly,NH-Icon-commonbutterfly,160,Flying,4 AM - 7 PM,True,True,True,True,True,True,False,False,True,True,True,True
+1,Yellow butterfly,NH-Icon-yellowbutterfly,160,Flying,4 AM - 7 PM,False,False,True,True,True,True,False,False,True,True,False,False
+2,Tiger butterfly,NH-Icon-tigerbutterfly,240,Flying,4 AM - 7 PM,False,False,True,True,True,True,True,True,True,False,False,False
+3,Peacock butterfly,NH-Icon-peacockbutterfly,2500,Flying by Hybrid Flowers,4 AM - 7 PM,False,False,True,True,True,True,False,False,False,False,False,False
+4,Common bluebottle,NH-Icon-commonbluebottle,300,Flying,4 AM - 7 PM,False,False,False,True,True,True,True,True,False,False,False,False
+5,Paper kite butterfly,NH-Icon-paperkitebutterfly,1000,Flying,8 AM - 7 PM,True,True,True,True,True,True,True,True,True,True,True,True
+6,Great purple emperor,NH-Icon-greatpurpleemperor,3000,Flying,4 AM - 7 PM,False,False,False,False,True,True,True,True,False,False,False,False
+7,Monarch butterfly,NH-Icon-monarchbutterfly,140,Flying,4 AM - 5 PM,False,False,False,False,False,False,False,False,True,True,True,False
+8,Emperor butterfly,NH-Icon-emperorbutterfly,4000,Flying,5 PM - 8 AM,True,True,True,False,False,True,True,True,True,False,False,True
+9,Agrias butterfly,NH-Icon-agriasbutterfly,3000,Flying,8 AM - 5 PM,False,False,False,True,True,True,True,True,True,False,False,False
+10,Rajah Brooke's birdwing,NH-Icon-rajahbrookesbirdwing,2500,Flying by Purple Flowers,8 AM - 5 PM,True,True,False,True,True,True,True,True,True,False,False,True
+11,Queen Alexandra's birdwing,NH-Icon-queenalexandrasbirdwing,4000,Flying,8 AM - 4 PM,False,False,False,False,True,True,True,True,True,False,False,False
+12,Moth,NH-Icon-moth,130,Flying by Light,7 PM - 4 AM,True,True,True,True,True,True,True,True,True,True,True,True
+13,Atlas moth,NH-Icon-atlasmoth,3000,On Trees,7 PM - 4 AM,False,False,False,True,True,True,True,True,True,False,False,False
+14,Madagascan sunset moth,NH-Icon-madagascansunsetmoth,2500,"Flying, Lands on Ground",8 AM - 4 PM,False,False,False,True,True,True,True,True,True,False,False,False
+15,Long locust,NH-Icon-longlocust,200,On the Ground,8 AM - 7 PM,False,False,False,True,True,True,True,True,True,True,True,False
+16,Migratory locust,NH-Icon-migratorylocust,600,On the Ground,8 AM - 7 PM,False,False,False,False,False,False,False,True,True,True,True,False
+17,Rice grasshopper,NH-Icon-ricegrasshopper,160,On the Ground,8 AM - 7 PM,False,False,False,False,False,False,False,True,True,True,True,False
+18,Grasshopper,NH-Icon-grasshopper,160,On the Ground,8 AM - 5 PM,False,False,False,False,False,False,True,True,True,False,False,False
+19,Cricket,NH-Icon-cricket,130,On the Ground,5 PM - 8 AM,False,False,False,False,False,False,False,False,True,True,True,False
+20,Bell cricket,NH-Icon-bellcricket,430,On the Ground,5 PM - 8 AM,False,False,False,False,False,False,False,False,True,True,False,False
+21,Mantis,NH-Icon-mantis,430,On Flowers,8 AM - 5 PM,False,False,True,True,True,True,True,True,True,True,True,False
+22,Orchid mantis,NH-Icon-orchidmantis,2400,On Flowers (White),8 AM - 5 PM,False,False,True,True,True,True,True,True,True,True,True,False
+23,Honeybee,NH-Icon-honeybee,200,Flying,8 AM - 5 PM,False,False,True,True,True,True,True,False,False,False,False,False
+24,Wasp,NH-Icon-wasp,2500,Shaking Trees,All day,True,True,True,True,True,True,True,True,True,True,True,True
+25,Brown cicada,NH-Icon-browncicada,250,On Trees,8 AM - 5 PM,False,False,False,False,False,False,True,True,False,False,False,False
+26,Robust cicada,NH-Icon-robustcicada,300,On Trees,8 AM - 5 PM,False,False,False,False,False,False,True,True,False,False,False,False
+27,Giant cicada,NH-Icon-giantcicada,500,On Trees,8 AM - 5 PM,False,False,False,False,False,False,True,True,False,False,False,False
+28,Walker cicada,NH-Icon-walkercicada,400,On Trees,8 AM - 5 PM,False,False,False,False,False,False,False,True,True,False,False,False
+29,Evening cicada,NH-Icon-eveningcicada,550,On Trees,4 AM - 8 AM & 4 PM - 7 PM,False,False,False,False,False,False,True,True,False,False,False,False
+30,Cicada shell,NH-Icon-cicadashell,10,On Trees,All day,False,False,False,False,False,False,True,True,False,False,False,False
+31,Red dragonfly,NH-Icon-reddragonfly,180,Flying,8 AM - 7 PM,False,False,False,False,False,False,False,False,True,True,False,False
+32,Darner dragonfly,NH-Icon-darnerdragonfly,230,Flying,8 AM - 5 PM,False,False,False,True,True,True,True,True,True,True,False,False
+33,Banded dragonfly,NH-Icon-bandeddragonfly,4500,Flying,8 AM - 5 PM,False,False,False,False,True,True,True,True,True,True,False,False
+34,Damselfly,NH-Icon-damselfly,500,Flying,All day,True,True,False,False,False,False,False,False,False,False,True,True
+35,Firefly,NH-Icon-firefly,300,Flying,7 PM - 4 AM,False,False,False,False,False,True,False,False,False,False,False,False
+36,Mole cricket,NH-Icon-molecricket,500,Underground,All day,True,True,True,True,True,False,False,False,False,False,True,True
+37,Pondskater,NH-Icon-pondskater,130,On Ponds and Rivers,8 AM - 7 PM,False,False,False,False,True,True,True,True,True,False,False,False
+38,Diving beetle,NH-Icon-divingbeetle,800,On Ponds and Rivers,8 AM - 7 PM,False,False,False,False,True,True,True,True,True,False,False,False
+39,Giant water bug,NH-Icon-giantwaterbug,2000,On Ponds and Rivers,7 PM - 8 AM,False,False,False,True,True,True,True,True,True,False,False,False
+40,Stinkbug,NH-Icon-stinkbug,120,On Flowers,All day,False,False,True,True,True,True,True,True,True,True,False,False
+41,Man-faced stink bug,NH-Icon-manfacedstinkbug,1000,On Flowers,7 PM - 8 AM,False,False,True,True,True,True,True,True,True,True,False,False
+42,Ladybug,NH-Icon-ladybug,200,On Flowers,8 AM - 5 PM,False,False,True,True,True,True,False,False,False,True,False,False
+43,Tiger beetle,NH-Icon-tigerbeetle,1500,On the Ground,All day,False,True,True,True,True,True,True,True,True,True,False,False
+44,Jewel beetle,NH-Icon-jewelbeetle,2400,On Tree Stumps,All day,False,False,False,True,True,True,True,True,False,False,False,False
+45,Violin beetle,NH-Icon-violinbeetle,450,On Tree Stumps,All day,False,False,False,False,True,True,False,False,True,True,True,False
+46,Citrus long-horned beetle,NH-Icon-citruslonghornedbeetle,350,On Tree Stumps,All day,True,True,True,True,True,True,True,True,True,True,True,True
+47,Rosalia batesi beetle,NH-Icon-rosaliabatesibeetle,3000,On Tree Stumps,All day,False,False,False,False,True,True,True,True,True,False,False,False
+48,Blue weevil beetle,NH-Icon-blueweevilbeetle,800,On Trees (Coconut?),All day,False,False,False,False,False,False,True,True,False,False,False,False
+49,Dung beetle,NH-Icon-dungbeetle,3000,On the Ground (rolling snowballs),All day,True,True,False,False,False,False,False,False,False,False,False,True
+50,Earth-boring dung beetle,NH-Icon-earthboringdungbeetle,300,On the Ground,All day,False,False,False,False,False,False,True,True,True,False,False,False
+51,Scarab beetle,NH-Icon-scarabbeetle,10000,On Trees,11 PM - 8 AM,False,False,False,False,False,False,True,True,False,False,False,False
+52,Drone beetle,NH-Icon-dronebeetle,200,On Trees,All day,False,False,False,False,False,True,True,True,False,False,False,False
+53,Goliath beetle,NH-Icon-goliathbeetle,8000,On Trees (Coconut),5 PM - 8 AM,False,False,False,False,False,True,True,True,True,False,False,False
+54,Saw stag,NH-Icon-sawstag,2000,On Trees,All day,False,False,False,False,False,False,True,True,False,False,False,False
+55,Miyama stag,NH-Icon-miyamastag,1000,On Trees,All day,False,False,False,False,False,False,True,True,False,False,False,False
+56,Giant stag,NH-Icon-giantstag,10000,On Trees,11 PM - 8 AM,False,False,False,False,False,False,True,True,False,False,False,False
+57,Rainbow stag,NH-Icon-rainbowstag,6000,On Trees,7 PM - 8 AM,False,False,False,False,False,True,True,True,True,False,False,False
+58,Cyclommatus stag,NH-Icon-cyclommatusstag,8000,On Trees,5 PM - 8 AM,False,False,False,False,False,False,True,True,False,False,False,False
+59,Golden stag,NH-Icon-goldenstag, ?,On Trees,5 PM - 8 AM,False,False,False,False,False,False,True,True,False,False,False,False
+60,Giraffe stag,NH-Icon-giraffestag, ?,On Trees,5 PM - 8 AM,False,False,False,False,False,False,True,True,False,False,False,False
+61,Horned dynastid,NH-Icon-horneddynastid,1350,On Trees,5 PM - 8 AM,False,False,False,False,False,False,True,True,False,False,False,False
+62,Horned atlas,NH-Icon-hornedatlas,8000,On Trees,5 PM - 8 AM,False,False,False,False,False,False,True,True,False,False,False,False
+63,Horned elephant,NH-Icon-hornedelephant,8000,On Trees,5 PM - 8 AM,False,False,False,False,False,False,True,True,False,False,False,False
+64,Horned hercules,NH-Icon-hornedhercules, ?,On Trees,5 PM - 8 AM,False,False,False,False,False,False,True,True,False,False,False,False
+65,Walking stick,NH-Icon-walkingstick,600,On Trees,4 AM - 8 AM & 5 PM - 7 PM,False,False,False,False,False,False,True,True,True,True,True,False
+66,Walking leaf,NH-Icon-walkingleaf,600,Under Trees Disguised as Leafs,All day,False,False,False,False,False,False,True,True,True,False,False,False
+67,Bagworm,NH-Icon-bagworm,600,Shaking Trees,All day,True,True,True,True,True,True,True,True,True,True,True,True
+68,Ant,NH-Icon-ant,80,On rotten food,All day,True,True,True,True,True,True,True,True,True,True,True,True
+69,Hermit crab,NH-Icon-hermitcrab,1000,Beach disguised as Shells,7 PM - 8 AM,True,True,True,True,True,True,True,True,True,True,True,True
+70,Wharf roach,NH-Icon-wharfroach,200,On Beach Rocks,All day,True,True,True,True,True,True,True,True,True,True,True,True
+71,Fly,NH-Icon-fly,60,On Trash Items,All day,True,True,True,True,True,True,True,True,True,True,True,True
+72,Mosquito,NH-Icon-mosquito,130,Flying,5 PM - 4 AM,False,False,False,False,False,True,True,True,True,False,False,False
+73,Flea,NH-Icon-flea,70,Villager's Heads,All day,False,False,False,True,True,True,True,True,True,True,True,False
+74,Snail,NH-Icon-snail,250,On Rocks (Rain),All day,True,True,True,True,True,True,True,True,True,True,True,True
+75,Pill bug,NH-Icon-pillbug,250,Hitting Rocks,11 PM - 4 PM,True,True,True,True,True,True,False,False,True,True,True,True
+76,Centipede,NH-Icon-centipede,300,Hitting Rocks,4 PM - 11 PM,True,True,True,True,True,True,False,False,True,True,True,True
+77,Spider,NH-Icon-spider,480,Shaking Trees,7 PM - 8 AM,True,True,True,True,True,True,True,True,True,True,True,True
+78,Tarantula,NH-Icon-tarantula,8000,On the Ground,7 PM - 4 AM,True,True,True,True,False,False,False,False,False,False,True,True
+79,Scorpion,NH-Icon-scorpion,8000,On the Ground,7 PM - 4 AM,False,False,False,False,True,True,True,True,True,True,False,False
