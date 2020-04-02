@@ -59,7 +59,7 @@ function createCalendar(months) {
         let outer = document.createElement("div");
 
         // highlighting the current month in the calendar
-        if (month == MONTHS[MONTH_NUM]) {
+        if (month == $("input[name='month']:checked").val()) {
             outer.classList.add("current");
         }
 

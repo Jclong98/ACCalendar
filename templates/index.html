@@ -17,8 +17,13 @@
 <body>
     <header id="header">
         <h1>Animal Crossing Fish/Bugs Calendar</h1>
-    </header>
 
+        <div class="legend">
+            <p class="coming-in">New this month</p>
+            <p class="going-out">Leaving after this month</p>
+        </div>
+    </header>
+    
     <div class="calendar-widget">
         <label>
             <input type="radio" name="month" id="january" value="january">
@@ -76,10 +81,10 @@
 
     <div id="output">
         <h1>Fish</h1>
-        <table id="fish"></table>
+        <div id="fish"></div>
         
         <h1>Bugs</h1>
-        <table id="bugs"></table>
+        <div id="bugs"></div>
     </div>
 
     <script src="{{url_for('static', filename='update.js')}}"></script>

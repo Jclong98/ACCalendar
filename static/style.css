@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }        
 
 html, body {
@@ -13,15 +14,31 @@ html, body {
 header {
     background-color: yellowgreen;
     display: flex;
-    padding: 5px;
+    padding: 1rem;
     color: rgb(50, 90, 10);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.legend {
+    background: rgb(255, 242, 226);
+    border-radius: 5px;
+    display: flex;
+    color: black;
+}
+
+.legend p {
+    padding: 3px 5px;
+    margin: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 .calendar-widget {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 200px;
-    margin: 30px auto;
+    margin: 30px auto 0 auto;
 }
 
 .calendar-widget input[type="radio"] {
@@ -50,6 +67,10 @@ header {
     display: flex;
 }
 
+.calendar-widget label span:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
 .calendar-widget label input:checked ~ span {
     background-color: yellowgreen;
     color: rgb(50, 90, 10);
@@ -60,9 +81,13 @@ header {
     flex-direction: column;
 }
 
-h1 {
+nav h1 {
+    margin: 0.5em;
+}
+
+#output h1 {
     border-bottom: 2px solid yellowgreen;
-    margin: 1em 0;
+    margin-top: 0.5em;
     padding: 0 1em;
 }
 
