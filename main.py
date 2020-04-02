@@ -13,8 +13,8 @@ def get_months():
 
     m = request.args['month']
 
-    fish_df = pd.read_csv('static/fish.csv', index_col=0)
-    bugs_df = pd.read_csv('static/bugs.csv', index_col=0)
+    fish_df = pd.read_csv('./static/fish.csv', index_col=0)
+    bugs_df = pd.read_csv('./static/bugs.csv', index_col=0)
     
     return jsonify({
         "fish":json.loads(fish_df[fish_df[m]==True].to_json(orient="index")),
