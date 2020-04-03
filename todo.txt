@@ -1,6 +1,3 @@
 countdown timer to see when fish and bugs will be gone
 
-color code new fish/bugs for this month green
-color code last month to get fish/bugs tomato
-
-mobile view
+checkmark for currently available based on time
