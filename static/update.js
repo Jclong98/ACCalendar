@@ -83,14 +83,18 @@ function createCatch(index, row) {
     catchDiv.classList.add("catch");
 
     // determine if this catch is coming into season or going out of season
-    m = $("input[name='month']:checked").val()
-
+    m = $("input[name='month']:checked").val();
+    mIndex = MONTHS.indexOf(m);
 
     if (row[m]) {
-        if (!row[MONTHS[MONTHS.indexOf(m) - 1]]) {
+        
+        // special cases for january and december require the use 
+        // of ternary operators because javascript does not support 
+        // negative indexing 😡
+        if (!row[MONTHS[(mIndex != 0) ? mIndex - 1 : 11]]) {
             catchDiv.classList.add("coming-in");
         }
-        if (!row[MONTHS[MONTHS.indexOf(m) + 1]]) {
+        if (!row[MONTHS[(mIndex != 11) ? mIndex + 1 : 0]]) {
             catchDiv.classList.add("going-out");
         }
     }
