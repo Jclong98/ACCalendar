@@ -28,6 +28,12 @@ const MONTHS_ABBR = {
     "december":"Dec.",
 }
 
+// this will be filled when getData() is called;
+var catches = {
+    'fish':[],
+    'bugs':[],
+};
+
 // select the current month
 var d = new Date();
 const MONTH_NUM = d.getMonth();
@@ -78,6 +84,8 @@ function createCalendar(months) {
     return widget;
 }
 
+
+// create a .catch div and fill it with indformation from index, row
 function createCatch(index, row) {
     let catchDiv = document.createElement("div");
     catchDiv.classList.add("catch");
@@ -167,34 +175,49 @@ function createCatch(index, row) {
     return catchDiv;
 }
 
-// use jquery and ajax to query the server and get a response
+// updating the output sections of the page with the given data
 function updateFilter() {
 
-    console.log("updating...");
+    for (let type of ['fish', 'bugs']) {
+        var output = document.getElementById(type);
+        output.innerHTML = '';
+
+        for (let [index, row] of Object.entries(catches[type])) {
+            let monthSelection = $("input[name='month']:checked").val();
+
+            if (row[monthSelection] || monthSelection == 'all') {
+                output.appendChild(createCatch(index, row));
+            }
+        }
+    }
+}
+
+// use jquery and ajax to query the server and get a response
+function getData() {
+    console.log("getting data...");
 
     // this is the actual query to the server
     $.getJSON(
         // location of url we want to contact
-        $SCRIPT_ROOT + '/_get_months', 
+        $SCRIPT_ROOT + '/_get_data', 
         
         // json to pass into that url
         // getting the checked property for the month radio widget
         {
             month:$("input[name='month']:checked").val()
         },
+
         // on success, this function is called
         function(data) {
-            for (let type of ['fish', 'bugs']) {
-                var output = document.getElementById(type);
-                output.innerHTML = '';
-
-                for (let [index, row] of Object.entries(data[type])) {
-                    output.appendChild(createCatch(index, row));
-                }
-            }
+            catches['fish'] = data['fish'];
+            catches['bugs'] = data['bugs'];
+            updateFilter();
         }
     )
 }
+
+// poputlating the data when the page loads
+getData();
 
 // when the month radio buttons are changed, we want to run all the backend ajax stuff
 $("input[name='month']").change(updateFilter);
