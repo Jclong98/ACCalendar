@@ -175,6 +175,7 @@ function createCatch(index, row) {
     return catchDiv;
 }
 
+
 // updating the output sections of the page with the given data
 function updateFilter() {
 
@@ -191,6 +192,7 @@ function updateFilter() {
         }
     }
 }
+
 
 // use jquery and ajax to query the server and get a response
 function getData() {
@@ -215,6 +217,7 @@ function getData() {
         }
     )
 }
+
 
 // poputlating the data when the page loads
 getData();
