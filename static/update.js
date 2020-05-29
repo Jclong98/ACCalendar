@@ -108,7 +108,7 @@ function createCatch(index, row) {
     }
 
     // icon
-    let img = createImg(row['image'], 'webp');
+    let img = createImg(row['image'], 'png');
     img.classList.add("icon");
 
     // fishnum + name of fish
